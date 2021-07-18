@@ -1,0 +1,24 @@
+helm create <chart name> => To create chart
+helm install <release name> <chart path> => To deploy the chart
+helm uninstall <release name> => To delete the chart
+helm repo list => To list the repos
+helm repo add <repo name> <url> => To add repo
+helm search repo <repo name> => To list helm charts available in the repo
+helm package <chart path> => To package the helm into a tar file
+curl —data-binary <tar file> <repo url/api/charts> => To push the chart to the repo
+#helm push plugin can also be used to push the chart to repo instead of using curl
+helm plugin list => To list the helm plugins which got installed
+helm repo update => To update the helm repos, which will fetch the newly available charts
+helm search repo -l  <repo name> => To list the various versions available for the chart on the repo
+helm install —debug —dry-run <release name> <chart path> => To check syntax and values substitution 
+helm lint <chart path> => To check whether the standard is followed
+helm test <release name> => For testing
+helm list => To list helm deployments
+helm get notes <release name> => To get the notes for the particular deployment 
+helm get values  <release name> => To get user defined values for the particular deployment 
+helm get manifest  <release name> => To get the rendered manifest for the particular deployment 
+helm get hooks <release name> => To get the hooks of the particular deployment 
+helm get all <release name> => To get notes values manifest and hooks of the particular deployment 
+helm status <release name> => To get the status and description of the deployment
+helm upgrade <release name> <chart path> => To upgrade the particular deployment 
+helm rollback <release name> <revision> => To rollback the particular deployment
